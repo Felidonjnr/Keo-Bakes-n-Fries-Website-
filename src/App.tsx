@@ -52,8 +52,19 @@ const Navbar = ({ orderCount }: { orderCount: number }) => {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-3 group cursor-pointer"
         >
-          <div className="w-10 h-10 bg-gold rounded-xl flex items-center justify-center text-2xl group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-gold/20">
-            {BRAND_INFO.logoEmoji}
+          <div className={`w-10 h-10 ${BRAND_INFO.logoUrl ? 'bg-transparent' : 'bg-gold shadow-lg shadow-gold/20'} rounded-xl flex items-center justify-center text-2xl group-hover:rotate-12 transition-transform duration-300 overflow-hidden`}>
+            {BRAND_INFO.logoUrl ? (
+              <img 
+                src={BRAND_INFO.logoUrl} 
+                alt={BRAND_INFO.name} 
+                className="w-full h-full object-contain"
+                referrerPolicy="no-referrer"
+              />
+            ) : BRAND_INFO.logoEmoji ? (
+              BRAND_INFO.logoEmoji
+            ) : (
+              <ChefHat className="text-white" size={24} />
+            )}
           </div>
           <div>
             <h1 className="text-white font-display font-bold text-xl leading-none tracking-tight">{BRAND_INFO.name}</h1>
@@ -556,13 +567,13 @@ export default function App() {
               >
                 <motion.div 
                   animate={{ 
-                    scale: [1, 1.05, 1],
+                    y: [0, -6, 0],
                   }}
                   transition={{ 
-                    duration: 2, 
+                    duration: 3, 
                     repeat: Infinity, 
                     ease: "easeInOut",
-                    delay: i * 0.2
+                    delay: i * 0.3
                   }}
                   className="w-14 h-14 bg-white text-primary-red rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl shadow-charcoal/5"
                 >
@@ -594,14 +605,13 @@ export default function App() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 0.98 }}
                 className={`group relative overflow-hidden rounded-[40px] cursor-pointer ${item.span}`}
                 onClick={() => setLightboxImage(item.src)}
               >
                 <img 
                   src={item.src} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gold/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
