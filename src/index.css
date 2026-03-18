@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-red: #C0392B;
+  --color-red-dark: #96281B;
+  --color-gold: #E8A020;
+  --color-gold-light: #F5C842;
+  --color-cream: #FFF8EE;
+  --color-cream-dark: #F5EDDB;
+  --color-charcoal: #1C1C1C;
+  --color-charcoal-2: #2D2D2D;
+  --color-warm-gray: #7A6F5E;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Nunito", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-charcoal font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .section-tag {
+    @apply inline-block px-4 py-1 border border-gold/30 bg-gold/10 text-gold text-xs font-bold tracking-[2px] uppercase rounded-full mb-4;
+  }
+  .btn-primary {
+    @apply px-8 py-3 bg-primary-red text-white font-bold rounded-full transition-all duration-300 hover:bg-red-dark hover:shadow-[0_0_20px_rgba(192,57,43,0.4)] active:scale-95;
+  }
+  .btn-outline {
+    @apply px-8 py-3 border-2 border-white text-white font-bold rounded-full transition-all duration-300 hover:bg-white hover:text-charcoal active:scale-95;
+  }
+  .btn-gold {
+    @apply px-8 py-3 bg-gold text-charcoal font-bold rounded-full transition-all duration-300 hover:bg-gold-light active:scale-95;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@700;900&display=swap');
