@@ -67,7 +67,7 @@ export const MENU_CATEGORIES = [
     items: [
       { name: "Classic Samosas", description: "Crispy triangular pastries, seasoned meat & vegetables.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864789/IMG-20260313-WA0062_ctyebq.jpg" },
       { name: "Puff Puff (Regular)", description: "Warm, golden-fried dough balls. Timeless staple.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864785/IMG-20260313-WA0061_ppyskx.jpg" },
-      { name: "Spring Rolls", description: "Delicate crispy rolls, savoury fillings, perfectly seasoned.", image: "input_file_2.png" },
+      { name: "Spring Rolls", description: "Delicate crispy rolls, savoury fillings, perfectly seasoned.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870838/368329_zjmzeo.jpg" },
     ]
   },
   {
