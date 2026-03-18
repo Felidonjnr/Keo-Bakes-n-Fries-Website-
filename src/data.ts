@@ -49,7 +49,7 @@ export const SIGNATURE_PRODUCTS = [
     name: "Meat Pies", 
     badge: "Oven Fresh", 
     description: "Flaky buttery pastry with seasoned filling. The ultimate comfort snack.", 
-    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870066/image-39_e7whsv.jpg.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870066/image-39_e7whsv.jpg" 
   },
   { 
     id: 6, 
