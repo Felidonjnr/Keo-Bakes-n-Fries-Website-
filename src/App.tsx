@@ -173,9 +173,7 @@ export default function App() {
   const [activeMenuTab, setActiveMenuTab] = useState(MENU_CATEGORIES[0].id);
   const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const [toasts, setToasts] = useState<{ id: number, message: string }[]>([]);
-  const [galleryItems, setGalleryItems] = useState(GALLERY_IMAGES);
   const [orderList, setOrderList] = useState<OrderItem[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -215,26 +213,6 @@ export default function App() {
     return encodeURIComponent(message);
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files) return;
-
-    Array.from(files).forEach((file: File) => {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const result = event.target?.result as string;
-        if (result) {
-          setGalleryItems(prev => [
-            ...prev, 
-            { src: result, span: "col-span-1 row-span-1", title: "Uploaded Photo" }
-          ]);
-          addToast("Photo shared with the community!");
-        }
-      };
-      reader.readAsDataURL(file);
-    });
-  };
-
   return (
     <div className="relative bg-white selection:bg-gold selection:text-charcoal">
       {/* Progress Bar */}
@@ -249,7 +227,7 @@ export default function App() {
             initial={{ scale: 1.2 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-            src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=1920" 
+            src="https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=1920" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -576,9 +554,20 @@ export default function App() {
                 transition={{ delay: i * 0.1 }}
                 className={`group relative p-10 bg-cream rounded-[40px] hover:bg-primary-red hover:text-white transition-all duration-500 ${service.span}`}
               >
-                <div className="w-14 h-14 bg-white text-primary-red rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl shadow-charcoal/5">
+                <motion.div 
+                  animate={{ 
+                    scale: [1, 1.05, 1],
+                  }}
+                  transition={{ 
+                    duration: 2, 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: i * 0.2
+                  }}
+                  className="w-14 h-14 bg-white text-primary-red rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 shadow-xl shadow-charcoal/5"
+                >
                   {service.icon}
-                </div>
+                </motion.div>
                 <h3 className="text-2xl font-bold mb-4">{service.name}</h3>
                 <p className="text-warm-gray group-hover:text-white/80 transition-colors leading-relaxed">{service.desc}</p>
                 <div className="absolute top-10 right-10 text-4xl font-display font-black opacity-5 group-hover:opacity-10 transition-opacity">0{i + 1}</div>
@@ -598,8 +587,8 @@ export default function App() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px] mb-20">
-            {galleryItems.map((item, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+            {GALLERY_IMAGES.map((item, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -623,30 +612,6 @@ export default function App() {
               </motion.div>
             ))}
           </div>
-
-          {/* Upload Experience */}
-          <motion.div 
-            whileHover={{ scale: 1.01 }}
-            onClick={() => fileInputRef.current?.click()}
-            className="relative p-16 rounded-[60px] border-2 border-dashed border-white/10 hover:border-gold/40 text-center cursor-pointer transition-all group overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-            <input 
-              type="file" 
-              ref={fileInputRef} 
-              className="hidden" 
-              multiple 
-              accept="image/*" 
-              onChange={handleFileUpload}
-            />
-            <div className="relative z-10">
-              <div className="w-20 h-20 bg-white/5 text-gold rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Upload size={32} />
-              </div>
-              <h3 className="text-3xl font-display font-bold text-white mb-4">Share Your Experience</h3>
-              <p className="text-white/50 text-lg max-w-md mx-auto">Click to upload photos of your Keo Bakes order and join our community gallery.</p>
-            </div>
-          </motion.div>
         </div>
       </section>
 

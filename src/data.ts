@@ -5,7 +5,7 @@
 
 export const BRAND_INFO = {
   name: "Keo Bakes n' Fries",
-  tagline: "Uyo's #1 One-Stop Store for Small Chops & Pastries",
+  tagline: "Uyo's #1 Destination for Premium Small Chops",
   location: "Uyo, Akwa Ibom State",
   phone1: "0808 807 3411",
   phone2: "0706 801 0041",
@@ -56,7 +56,7 @@ export const SIGNATURE_PRODUCTS = [
     name: "Assorted Trays", 
     badge: "Event Ready", 
     description: "The ultimate variety tray for your events. Samosas, spring rolls, puff puff, and more.", 
-    image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=800" 
+    image: "https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=800" 
   },
 ];
 
@@ -71,20 +71,11 @@ export const MENU_CATEGORIES = [
     ]
   },
   {
-    id: "pastries",
-    name: "Pastries",
-    items: [
-      { name: "Meat Pie", description: "Rich flaky pastry, minced meat, potatoes & carrots.", image: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=400" },
-      { name: "Celebration Cakes", description: "Beautifully crafted custom cakes for all occasions in Uyo.", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=400" },
-      { name: "Assorted Mini Pastries", description: "Fresh baked mini pastries — great for snacking or gifting.", image: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=400" },
-    ]
-  },
-  {
     id: "combo-packs",
     name: "Combo Packs",
     items: [
-      { name: "The Uyo Special", description: "A curated mix of our best-selling small chops.", image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400" },
-      { name: "Family Feast", description: "Large assortment for family gatherings and weekend treats.", image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=400" },
+      { name: "The Uyo Special", description: "A curated mix of our best-selling small chops.", image: "https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=400" },
+      { name: "Family Feast", description: "Large assortment for family gatherings and weekend treats.", image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=400" },
     ]
   },
   {
@@ -98,7 +89,7 @@ export const MENU_CATEGORIES = [
 ];
 
 export const GALLERY_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&q=80&w=1200", span: "col-span-2 row-span-2", title: "Event Setup" },
+  { src: "https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=1200", span: "col-span-2 row-span-2", title: "Event Setup" },
   { src: "https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=600", span: "col-span-1 row-span-1", title: "Fresh Samosas" },
   { src: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600", span: "col-span-1 row-span-1", title: "Golden Puff Puff" },
   { src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800", span: "col-span-2 row-span-1", title: "Spring Roll Platter" },
