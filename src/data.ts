@@ -42,14 +42,14 @@ export const SIGNATURE_PRODUCTS = [
     id: 4, 
     name: "Corn Dogs", 
     description: "Juicy sausages in golden cornmeal batter. A modern favorite for the Uyo youth.", 
-    image: "input_file_3.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870072/image-43_bfdynf.jpg" 
   },
   { 
     id: 5, 
     name: "Meat Pies", 
     badge: "Oven Fresh", 
     description: "Flaky buttery pastry with seasoned filling. The ultimate comfort snack.", 
-    image: "input_file_4.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870066/image-39_e7whsv.jpg.png" 
   },
   { 
     id: 6, 
@@ -65,8 +65,8 @@ export const MENU_CATEGORIES = [
     id: "small-chops",
     name: "Small Chops",
     items: [
-      { name: "Classic Samosas", description: "Crispy triangular pastries, seasoned meat & vegetables.", image: "input_file_1.png" },
-      { name: "Puff Puff (Regular)", description: "Warm, golden-fried dough balls. Timeless staple.", image: "input_file_0.png" },
+      { name: "Classic Samosas", description: "Crispy triangular pastries, seasoned meat & vegetables.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864789/IMG-20260313-WA0062_ctyebq.jpg" },
+      { name: "Puff Puff (Regular)", description: "Warm, golden-fried dough balls. Timeless staple.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864785/IMG-20260313-WA0061_ppyskx.jpg" },
       { name: "Spring Rolls", description: "Delicate crispy rolls, savoury fillings, perfectly seasoned.", image: "input_file_2.png" },
     ]
   },
@@ -74,7 +74,7 @@ export const MENU_CATEGORIES = [
     id: "combo-packs",
     name: "Combo Packs",
     items: [
-      { name: "The Uyo Special", description: "A curated mix of our best-selling small chops.", image: "input_file_6.png" },
+      { name: "The Uyo Special", description: "A curated mix of our best-selling small chops.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864790/IMG-20260313-WA0057_oqok8v.jpg" },
       { name: "Family Feast", description: "Large assortment for family gatherings and weekend treats.", image: "input_file_7.png" },
     ]
   },
@@ -89,11 +89,11 @@ export const MENU_CATEGORIES = [
 ];
 
 export const GALLERY_IMAGES = [
-  { src: "input_file_0.png", span: "col-span-2 row-span-2", title: "Signature Puff Puff" },
-  { src: "input_file_1.png", span: "col-span-1 row-span-1", title: "Crispy Samosas" },
-  { src: "input_file_2.png", span: "col-span-1 row-span-1", title: "Fresh Spring Rolls" },
-  { src: "input_file_3.png", span: "col-span-2 row-span-1", title: "Golden Corn Dogs" },
-  { src: "input_file_4.png", span: "col-span-1 row-span-1", title: "Meat Pie Perfection" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864790/IMG-20260313-WA0059_zinfei.jpg", span: "col-span-2 row-span-2", title: "Signature Puff Puff" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864784/IMG-20260313-WA0065_gac8xd.jpg", span: "col-span-1 row-span-1", title: "Crispy Samosas" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864785/IMG-20260313-WA0063_jeccts.jpg", span: "col-span-1 row-span-1", title: "Fresh Spring Rolls" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864786/IMG-20260313-WA0060_yzqics.jpg", span: "col-span-2 row-span-1", title: "Golden Corn Dogs" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864786/IMG-20260313-WA0066_isfmwc.jpg", span: "col-span-1 row-span-1", title: "Meat Pie Perfection" },
   { src: "input_file_5.png", span: "col-span-1 row-span-1", title: "Assorted Platter" },
   { src: "input_file_6.png", span: "col-span-1 row-span-1", title: "Event Catering" },
   { src: "input_file_7.png", span: "col-span-1 row-span-1", title: "Party Packs" },
