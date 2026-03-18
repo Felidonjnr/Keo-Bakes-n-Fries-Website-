@@ -14,8 +14,7 @@ export const BRAND_INFO = {
   instagram: "https://instagram.com/keobakesnfries",
   facebook: "https://facebook.com/keobakesnfries",
   logoEmoji: "🥟",
-  logoUrl: null // Replace with your logo URL like "https://your-site.com/logo.png"
-};
+  logoUrl: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864791/IMG-20260313-WA0056_jhryye.jpg"
 
 export const SIGNATURE_PRODUCTS = [
   { 
