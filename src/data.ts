@@ -91,8 +91,8 @@ export const MENU_CATEGORIES = [
 export const GALLERY_IMAGES = [
   { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864784/IMG-20260313-WA0065_gac8xd.jpg", span: "col-span-2 row-span-2", title: "Event Setup" },
   { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864785/IMG-20260313-WA0063_jeccts.jpg", span: "col-span-1 row-span-1", title: "Fresh Samosas" },
-  { src: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&q=80&w=600", span: "col-span-1 row-span-1", title: "Golden Puff Puff" },
-  { src: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800", span: "col-span-2 row-span-1", title: "Spring Roll Platter" },
-  { src: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=600", span: "col-span-1 row-span-1", title: "Meat Pies" },
-  { src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=600", span: "col-span-1 row-span-1", title: "Hygienic Prep" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864790/IMG-20260313-WA0059_zinfei.jpg", span: "col-span-1 row-span-1", title: "Golden Puff Puff" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864789/IMG-20260313-WA0062_ctyebq.jpg", span: "col-span-2 row-span-1", title: "Spring Roll Platter" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864786/IMG-20260313-WA0060_yzqics.jpg", span: "col-span-1 row-span-1", title: "Meat Pies" },
+  { src: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864786/IMG-20260313-WA0064_lf5kzd.jpg", span: "col-span-1 row-span-1", title: "Hygienic Prep" },
 ];
