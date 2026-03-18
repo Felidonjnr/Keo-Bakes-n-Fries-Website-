@@ -23,20 +23,20 @@ export const SIGNATURE_PRODUCTS = [
     name: "Puff Puff", 
     badge: "Uyo's Favourite", 
     description: "Soft, golden, perfectly sweet fried dough balls. A classic staple for every Uyo gathering.", 
-    image: "input_file_0.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773866300/369331_uydkok.jpg" 
   },
   { 
     id: 2, 
     name: "Samosas", 
     badge: "Crispy & Spiced", 
     description: "Crispy triangular pastries, spiced minced meat & vegetables. The perfect crunch.", 
-    image: "input_file_1.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773866303/image-34_oityii.jpg" 
   },
   { 
     id: 3, 
     name: "Spring Rolls", 
     description: "Light, crispy rolls with savoury fillings. A party essential in Akwa Ibom.", 
-    image: "input_file_2.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773866296/image-38_l5zd32.jpg" 
   },
   { 
     id: 4, 
@@ -56,7 +56,7 @@ export const SIGNATURE_PRODUCTS = [
     name: "Assorted Trays", 
     badge: "Event Ready", 
     description: "The ultimate variety tray for your events. Samosas, spring rolls, puff puff, and more.", 
-    image: "input_file_5.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864786/IMG-20260313-WA0064_lf5kzd.jpg" 
   },
 ];
 
