@@ -5,8 +5,25 @@ import {
   ChevronDown, Star, Leaf, ShieldCheck, Star as StarIcon, 
   Cake, Boxes, Handshake, FireExtinguisher, Package, 
   ChefHat, ClipboardList, Truck, Upload, Search, 
-  MessageCircle, ShoppingBag, ArrowRight, Play, Heart
+  MessageCircle, ShoppingBag, ArrowRight, Play, Heart,
+  Video
 } from 'lucide-react';
+
+// Custom TikTok Icon
+const TikTokIcon = ({ size = 20 }: { size?: number }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 // --- Data Import ---
 import { 
@@ -238,7 +255,7 @@ export default function App() {
             initial={{ scale: 1.2 }}
             animate={{ scale: 1 }}
             transition={{ duration: 10, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-            src="https://images.unsplash.com/photo-1601050633647-81a35d377a86?auto=format&fit=crop&q=80&w=1920" 
+            src="input_file_10.png" 
             alt="Hero Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -255,14 +272,14 @@ export default function App() {
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center gap-3 px-5 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-                <span className="w-2 h-2 bg-gold rounded-full animate-ping" />
-                {BRAND_INFO.tagline}
+                <Star size={12} className="text-gold fill-current animate-pulse" />
+                OUR PROMISE
               </div>
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl text-white font-display font-black leading-[0.9] mb-8 tracking-tighter">
-                FRESHLY <br />
-                <span className="text-gold italic">FRIED</span> <br />
-                JUST FOR YOU.
+                FRIED <br />
+                <span className="text-gold italic">PERFECTLY</span> <br />
+                FOR YOU.
               </h1>
               
               <p className="text-white/70 text-lg md:text-2xl max-w-2xl mb-12 leading-relaxed font-medium">
@@ -293,16 +310,22 @@ export default function App() {
 
         {/* Floating Socials */}
         <div className="absolute left-10 bottom-10 hidden xl:flex flex-col gap-6 z-10">
-          {[Instagram, Facebook, Twitter].map((Icon, i) => (
+          {[
+            { Icon: Instagram, href: BRAND_INFO.instagram },
+            { Icon: Facebook, href: BRAND_INFO.facebook },
+            { Icon: TikTokIcon, href: BRAND_INFO.tiktok }
+          ].map((item, i) => (
             <motion.a 
               key={i}
-              href="#"
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1 + i * 0.1 }}
               className="text-white/40 hover:text-gold transition-colors"
             >
-              <Icon size={20} />
+              <item.Icon size={20} />
             </motion.a>
           ))}
         </div>
@@ -316,6 +339,39 @@ export default function App() {
           <span className="text-[10px] font-black uppercase tracking-widest">Scroll</span>
           <div className="w-px h-12 bg-gradient-to-b from-white/40 to-transparent" />
         </motion.div>
+      </section>
+
+      {/* --- Connect With Us --- */}
+      <section className="py-20 bg-cream-dark border-y border-charcoal/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+            <div>
+              <h3 className="text-3xl font-display font-black mb-2">Connect With Us.</h3>
+              <p className="text-warm-gray">Follow our journey and see what's cooking in our kitchen.</p>
+            </div>
+            <div className="flex items-center gap-6">
+              {[
+                { Icon: Facebook, href: BRAND_INFO.facebook, label: "Facebook" },
+                { Icon: Instagram, href: BRAND_INFO.instagram, label: "Instagram" },
+                { Icon: TikTokIcon, href: BRAND_INFO.tiktok, label: "TikTok" }
+              ].map((social) => (
+                <motion.a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ y: -5 }}
+                  className="flex flex-col items-center gap-3 group"
+                >
+                  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-charcoal group-hover:bg-gold group-hover:text-white transition-all duration-300 shadow-xl shadow-charcoal/5">
+                    <social.Icon size={24} />
+                  </div>
+                  <span className="text-[10px] font-black uppercase tracking-widest opacity-50 group-hover:opacity-100 transition-opacity">{social.label}</span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* --- Signature Products --- */}
@@ -434,9 +490,9 @@ export default function App() {
               <div className="absolute inset-0 bg-gold/20 rounded-[60px] blur-[100px] animate-pulse" />
               <div className="relative h-full w-full rounded-[60px] overflow-hidden border border-white/10 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Our Kitchen" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                  src="https://images.unsplash.com/photo-1590650153855-d9e808231d41?auto=format&fit=crop&q=80&w=1000" 
+                  alt="Our Expert Chef" 
+                  className="w-full h-full object-cover hover:scale-110 transition-all duration-1000"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-transparent to-transparent" />
@@ -711,18 +767,28 @@ export default function App() {
               <div className="absolute inset-0 bg-gold/5 rounded-[60px] -rotate-3" />
               <div className="relative bg-white p-12 rounded-[60px] shadow-2xl border border-charcoal/5">
                 <h3 className="text-3xl font-display font-bold mb-8">Send an Enquiry</h3>
-                <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); addToast("Enquiry sent! We'll be in touch."); }}>
+                <form className="space-y-6" onSubmit={(e) => { 
+                  e.preventDefault(); 
+                  const formData = new FormData(e.currentTarget as HTMLFormElement);
+                  const name = formData.get('name');
+                  const phone = formData.get('phone');
+                  const service = formData.get('service');
+                  const message = formData.get('message');
+                  const waMessage = `Hello Keo Bakes n' Fries! I'd like to make an enquiry.\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}`;
+                  window.open(`https://wa.me/${BRAND_INFO.whatsapp}?text=${encodeURIComponent(waMessage)}`, '_blank');
+                  addToast("Redirecting to WhatsApp..."); 
+                }}>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-warm-gray ml-2">Full Name</label>
-                    <input type="text" placeholder="e.g. Chioma Johnson" className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all" required />
+                    <input name="name" type="text" placeholder="e.g. Chioma Johnson" className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all" required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-warm-gray ml-2">Phone Number</label>
-                    <input type="tel" placeholder="e.g. 0801 234 5678" className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all" required />
+                    <input name="phone" type="tel" placeholder="e.g. 0801 234 5678" className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all" required />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-warm-gray ml-2">Service Type</label>
-                    <select className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all appearance-none">
+                    <select name="service" className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all appearance-none">
                       <option>Event Catering</option>
                       <option>Bulk Party Pack</option>
                       <option>Custom Cake Order</option>
@@ -731,10 +797,10 @@ export default function App() {
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black uppercase tracking-widest text-warm-gray ml-2">Your Message</label>
-                    <textarea rows={4} placeholder="Tell us about your event..." className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all resize-none" required />
+                    <textarea name="message" rows={4} placeholder="Tell us about your event..." className="w-full bg-cream rounded-3xl px-8 py-4 focus:bg-white focus:ring-4 focus:ring-gold/10 border-2 border-transparent focus:border-gold outline-none transition-all resize-none" required />
                   </div>
                   <button type="submit" className="w-full btn-primary py-5 text-xs font-black uppercase tracking-widest">
-                    Send Message
+                    Send Message via WhatsApp
                   </button>
                 </form>
               </div>
@@ -751,8 +817,19 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
             <div className="space-y-8">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-gold rounded-2xl flex items-center justify-center text-2xl">
-                  {BRAND_INFO.logoEmoji}
+                <div className={`w-12 h-12 ${BRAND_INFO.logoUrl ? 'bg-transparent' : 'bg-gold'} rounded-2xl flex items-center justify-center text-2xl overflow-hidden`}>
+                  {BRAND_INFO.logoUrl ? (
+                    <img 
+                      src={BRAND_INFO.logoUrl} 
+                      alt={BRAND_INFO.name} 
+                      className="w-full h-full object-contain"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : BRAND_INFO.logoEmoji ? (
+                    BRAND_INFO.logoEmoji
+                  ) : (
+                    <ChefHat className="text-white" size={24} />
+                  )}
                 </div>
                 <h2 className="font-display font-bold text-3xl">{BRAND_INFO.name}</h2>
               </div>
@@ -760,9 +837,13 @@ export default function App() {
                 Uyo's premier one-stop store for premium Nigerian small chops, pastries, and event catering. Quality you can taste.
               </p>
               <div className="flex gap-4">
-                {[Instagram, Facebook, Twitter].map((Icon, i) => (
-                  <a key={i} href="#" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all duration-500">
-                    <Icon size={20} />
+                {[
+                  { Icon: Instagram, href: BRAND_INFO.instagram },
+                  { Icon: Facebook, href: BRAND_INFO.facebook },
+                  { Icon: TikTokIcon, href: BRAND_INFO.tiktok }
+                ].map((social, i) => (
+                  <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center hover:bg-gold hover:text-charcoal transition-all duration-500">
+                    <social.Icon size={20} />
                   </a>
                 ))}
               </div>
@@ -816,7 +897,9 @@ export default function App() {
 
       {/* --- Floating WhatsApp --- */}
       <motion.a 
-        href={`https://wa.me/${BRAND_INFO.whatsapp}`}
+        href={`https://wa.me/${BRAND_INFO.whatsapp}?text=${encodeURIComponent(BRAND_INFO.whatsappMessage)}`}
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ scale: 0, rotate: -45 }}
         animate={{ scale: 1, rotate: 0 }}
         whileHover={{ scale: 1.1 }}
