@@ -32,7 +32,7 @@ export const SIGNATURE_PRODUCTS = [
     name: "Samosas", 
     badge: "Crispy & Spiced", 
     description: "Crispy triangular pastries, spiced minced meat & vegetables. The perfect crunch.", 
-    image: "input_file_1.png" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870838/368329_zjmzeo.jpg" 
   },
   { 
     id: 3, 
@@ -77,7 +77,7 @@ export const MENU_CATEGORIES = [
     name: "Combo Packs",
     items: [
       { name: "The Uyo Special", description: "A curated mix of our best-selling small chops.", image: "input_file_6.png" },
-      { name: "Family Feast", description: "Large assortment for family gatherings and weekend treats.", image: "input_file_7.png" },
+      { name: "Family Feast", description: "Large assortment for family gatherings and weekend treats.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773866296/image-38_l5zd32.jpg" },
     ]
   },
   {
