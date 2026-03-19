@@ -7,12 +7,12 @@ export const BRAND_INFO = {
   name: "Keo Bakes n' Fries",
   tagline: "Uyo's #1 Destination for Premium Small Chops",
   location: "Uyo, Akwa Ibom State",
-  phone1: "0808 807 3411",
+  phone1: "0706 801 0041",
   phone2: "0706 801 0041",
-  whatsapp: "2348088073411",
-  email: "keobakesnfries@gmail.com",
-  instagram: "https://instagram.com/keobakesnfries",
-  facebook: "https://facebook.com/keobakesnfries",
+  whatsapp: "2347068010041",
+  email: "mailchiomzy@gmail.com",
+  instagram: "https://www.instagram.com/keobakesnfries?igsh=MWtmY3J0a253cjF5bw%3D%3D&utm_source=qr",
+  facebook: "https://www.facebook.com/share/17rZvnsGzz/?mibextid=wwXIfr",
   logoEmoji: null,
   logoUrl: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864791/IMG-20260313-WA0056_jhryye.jpg" // User provided logo
 };
