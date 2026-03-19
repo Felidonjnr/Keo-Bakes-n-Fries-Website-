@@ -261,8 +261,8 @@ export default function App() {
               
               <h1 className="text-6xl md:text-8xl lg:text-9xl text-white font-display font-black leading-[0.9] mb-8 tracking-tighter">
                 FRESHLY <br />
-                <span className="text-gold italic">CRAFTED</span> <br />
-                FOR YOU.
+                <span className="text-gold italic">FRIED</span> <br />
+                JUST FOR YOU.
               </h1>
               
               <p className="text-white/70 text-lg md:text-2xl max-w-2xl mb-12 leading-relaxed font-medium">
