@@ -44,7 +44,7 @@ export const SIGNATURE_PRODUCTS = [
     id: 4, 
     name: "Corn Dogs", 
     description: "Juicy sausages in golden cornmeal batter. A modern favorite for the Uyo youth.", 
-    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870072/image-43_bfdynf.jpg" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1774269874/image-50_ibnivo.jpg" 
   },
   { 
     id: 5, 
