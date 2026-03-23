@@ -67,7 +67,7 @@ export const MENU_CATEGORIES = [
     id: "small-chops",
     name: "Small Chops",
     items: [
-      { name: "Classic Samosas", description: "Crispy triangular pastries, seasoned meat & vegetables.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773870838/368329_zjmzeo.jpg" },
+      { name: "Classic Samosas", description: "Crispy triangular pastries, seasoned meat & vegetables.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1774270243/image-42_bv6i2n.jpg" },
       { name: "Puff Puff (Regular)", description: "Warm, golden-fried dough balls. Timeless staple.", image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773864785/IMG-20260313-WA0061_ppyskx.jpg" },
       { name: "Spring Rolls", description: "Delicate crispy rolls, savoury fillings, perfectly seasoned.", image: "input_file_2.png" },
     ]
