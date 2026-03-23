@@ -38,7 +38,7 @@ export const SIGNATURE_PRODUCTS = [
     id: 3, 
     name: "Spring Rolls", 
     description: "Light, crispy rolls with savoury fillings. A party essential in Akwa Ibom.", 
-    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1773866303/image-34_oityii.jpg" 
+    image: "https://res.cloudinary.com/drcroxtgs/image/upload/v1774269596/image-45_mmwxkw.jpg" 
   },
   { 
     id: 4, 
